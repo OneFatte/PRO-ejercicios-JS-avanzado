@@ -32,7 +32,5 @@ function buscarPokemon(nombre) {
             // handle error
             console.log(error.message);
         })
-
-
 }
 
