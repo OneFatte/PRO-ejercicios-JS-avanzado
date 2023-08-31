@@ -27,8 +27,10 @@ function mostrarPregunta() {
     const pregunta = preguntas[indicePreguntaActual];
     contenedorQuiz.innerHTML = `
         <h2>${pregunta.question}</h2>
-        <button class="respuesta">${pregunta.correct_answer}</button>
-        ${pregunta.incorrect_answers.map(respuesta => `<button class="respuesta">${respuesta}</button>`).join('')}
+        <div class="respuestas">
+            <button class="respuesta">${pregunta.correct_answer}</button>
+            ${pregunta.incorrect_answers.map(respuesta => `<button class="respuesta">${respuesta}</button>`).join('')}
+        </div>
     `;
 
     // Agregar listener de eventos a todos los botones de respuesta
